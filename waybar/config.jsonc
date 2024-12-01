@@ -1,0 +1,101 @@
+{
+    "position":"top",
+    "layer": "top",
+    "height":40,
+    "spacing": 24,
+    "modules-left": [
+	    "custom/apps",
+	    "hyprland/workspaces"
+    ],
+    "modules-center":[
+        "custom/media"
+    ],
+
+    "modules-right":[
+	    "custom/notification",
+	    "hyprland/language",
+	    "group/sound",
+	    "group/network",
+            "clock",
+	    "custom/power"
+    ],
+
+    "group/network": {
+	    "orientation": "horizontal",
+	    "modules": [
+		    "battery",
+		    "network"
+	    ]
+    },
+
+    "group/sound": {
+	    "orientation": "horizontal",
+	    "modules": [
+		    "custom/volume",
+		    "custom/microphone"
+	    ]
+    },
+
+    "hyprland/language": {
+	    "format": "{short} {variant}",
+	    "on-click": "/home/nathan/Documents/projects/virenv/bin/python /home/nathan/Documents/projects/langcheck.py"
+    },
+
+    "custom/power": {
+	    "format": "⏻"
+    },
+    "custom/apps": {
+	    "format": "󰣇",
+	    "on-click": "rofi -show"
+    },
+    "network": {
+     "format-wifi":"",
+     "format-ethernet":"",
+     "format-disconnected":"󰤮"
+    },
+
+    "battery": {
+        "format":"{icon}", 
+        "format-icons":["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-charging":"󰂄"
+    },
+    "custom/volume":{
+	    "exec": "sh ~/sh/output.sh",
+	    "return-type": "raw",
+	    "format": "{}",
+	    "interval": 1,
+	    "on-click": "pavucontrol",
+	    "on-click-right": "pamixer --toggle-mute"
+
+    },
+    "custom/microphone": {
+	    "exec": "sh ~/sh/mic.sh",
+	    "return-type": "raw",
+	    	"format": "{}",
+            "interval": 1,
+	    "on-click": "pavucontrol",
+	    "on-click-right": "pamixer --default-source --toggle-mute"
+    },
+    "custom/notification":{
+	    "format":"󰂚"
+    },
+    "custom/media": {
+        "format": "🎜 {}",
+        "interval":5,
+        "escape": true,
+        "exec": "playerctl metadata --format='{{ title }}'"
+    },
+
+//LEFT SIDE MODULES
+
+
+    "hyprland/workspaces": {
+        "format":"{icon}",
+        "sort-by-name":true,
+        "format-icons":{
+            "default":"⏺"
+        }
+    },
+    
+    "tray": {}
+}

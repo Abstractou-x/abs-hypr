@@ -1,0 +1,39 @@
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    font:                        "JetBrainsMono NF Bold 11";
+}
+
+
+
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       20%;
+}
+
+
+mainbox {
+    enabled: true;
+    background-color: #181825;
+    border: none;
+}
+
+listview {
+}
+
+
+element {
+}
+
+
+element-icon {
+}
+
+element-text {
+}
+
+scrollbar {
+	color: transparent;
+	background-color: transparent;
+}

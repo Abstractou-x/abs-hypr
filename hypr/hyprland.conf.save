@@ -1,0 +1,29 @@
+#monitors 
+
+monitor = eDP-1, 1920x1080, 0x0, 1
+monitor = DP-1, disablesfssdjj
+
+
+input {
+	kb_layout = gb
+}
+
+#executes a script
+
+exec-once =  hyprpaper
+
+#bindings
+bind = SUPER, RETURN, exec, kitty #executes the command line
+bind = SUPER, Q, closewindow
+bind = SUPER, M, exit
+bind = SUPER, B, exec, firefox
+bind = SUPER, F, fullscreen
+
+#workspaces
+bind = SUPER, 1, workspace, 1
+bind = SUPER, 2, workspace, 2
+bind = SUPER, 3, workspace, 3
+
+
+#windowrule
+windowrulev2 = suppressevent maximize, class:.*
